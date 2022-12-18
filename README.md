@@ -8,8 +8,11 @@ This is the first front-end project I will create at the General Assembly SEI60 
 ## Project Components
 
 - Wireframe design on Figma
+https://www.figma.com/file/O6ELSZSL8IjlM7WHeW2joA/Tic-Tac-Toe-Wireframe?node-id=3%3A7&t=gCaa5CvNYuNrksZ0-3
 
 - Pseudocodes (HTML5, CSS3, JS) on Notion
+
+- The TTT itself
 
 ## Approach 
 
