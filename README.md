@@ -7,6 +7,9 @@ This is the first front-end project I will create at the General Assembly SEI60 
 
 ## Project Components
 
+- Intial sketch
+https://imgur.com/a/rMAW4l7 
+
 - Wireframe design on Figma
 https://www.figma.com/file/O6ELSZSL8IjlM7WHeW2joA/Tic-Tac-Toe-Wireframe?node-id=3%3A7&t=gCaa5CvNYuNrksZ0-3
 
