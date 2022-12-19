@@ -4,15 +4,15 @@ console.log("yeehaw")
 // geeksforgeeks.org/simple-tic-tac-toe-game-using-javascript/ makes the most sense but also isn't that DRY
 
 // declare TTT squares as variables & their set DOM
-const b0 = document.getElementById("top-left")
-const b1 = document.getElementById("top-mid")
-const b2 = document.getElementById("top-right")
-const b3 = document.getElementById("mid-left")
-const b4 = document.getElementById("mid-mid")
-const b5 = document.getElementById("mid-right")
-const b6 = document.getElementById("bottom-left")
-const b7 = document.getElementById("bottom-mid")
-const b8 = document.getElementById("bottom-right")
+const b0 = document.getElementById("top-left").value
+const b1 = document.getElementById("top-mid").value
+const b2 = document.getElementById("top-right").value
+const b3 = document.getElementById("mid-left").value
+const b4 = document.getElementById("mid-mid").value
+const b5 = document.getElementById("mid-right").value
+const b6 = document.getElementById("bottom-left").value
+const b7 = document.getElementById("bottom-mid").value
+const b8 = document.getElementById("bottom-right").value
 
 // need to input x's & o's using .addEventListener, onclick & inner.HTML/text.Content
 
