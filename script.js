@@ -27,10 +27,13 @@ let diagonal1 = [b0, b1, b2]
 let diagonal2 = [b0, b1, b2]
 
 // need to input x's & o's using .addEventListener, onclick & inner.HTML/text.Content
-let addX = function () {
-    b0.addEventListener("click", onclick)
+
+document.getElementById("top-left").onclick = function () {
+    fun()
 }
-addX()
+function fun() {
+    document.getElementById("top-left").textContent = "x"
+}
 
 // checking win, loss or draw cases 
 // checking if Player 1 won or not as well as disabling other boxes
