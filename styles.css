@@ -4,7 +4,7 @@ body {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: repeat(8, 1fr);
-    grid-gap: 8px;
+    gap: 8px;
 }
 
 /* rainbow txt sourced from w3bits.com/rainbow-text weow*/
@@ -14,37 +14,98 @@ body {
     -webkit-background-clip: text; 
     color: transparent;
     text-align: center;
+    outline: 5px dotted white;
+}
+
+.card1, .card2 {
+    outline: 5px dotted white;
 }
 
 .heading {
     font-size: 64px;
-    outline: 5px dotted white;
     grid-column: 4 / 8;
     grid-row: 2 / 3;
 }
 
 h2 {
     font-size: 32px;
-    outline: 5px dotted white;
     grid-column: 4 / 8;
     grid-row: 3 / 4;
 }
 
 .card1 { 
-    outline: 5px dotted white;
     grid-column: 2 / 4;
     grid-row: 4 / 8;
 }
 
 .card2 {
-    outline: 5px dotted white;
     grid-column: 8 / 10;
     grid-row: 4 / 8;
 }
 
 .board {
-    outline: 5px dotted white;
     grid-column: 4 / 8;
     grid-row: 4 / 8;
+    /* display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    gap: 8px; */
+    background: lightgray;
 }
 
+.square {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    gap: 8px;
+    height: 100%;
+}
+
+.square > * {
+    outline: 5px dotted cyan;
+}
+
+.top-left {
+    grid-column: 2 / 4;
+    grid-row: 2 / 4;
+}
+
+.top-mid {
+    grid-column: 4 / 6;
+    grid-row: 2 / 4;
+}
+
+.top-right {
+    grid-column: 6 / 8;
+    grid-row: 2 / 4;
+}
+
+.mid-left {
+    grid-column: 2 / 4;
+    grid-row: 4 / 6;
+}
+
+.mid-mid {
+    grid-column: 4 / 6;
+    grid-row: 4 / 6;
+}
+
+.mid-right {
+    grid-column: 6 / 8;
+    grid-row: 4 / 6;
+}
+
+.bottom-left {
+    grid-column: 2 / 4;
+    grid-row: 6 / 8;
+}
+
+.bottom-mid {
+    grid-column: 4 / 6;
+    grid-row: 6 / 8;
+}
+
+.bottom-right {
+    grid-column: 6 / 8;
+    grid-row: 6 / 8;
+}
