@@ -1,5 +1,5 @@
 // testing if console actually works
-console.log("yeehaw")
+// console.log("yeehaw")
 
 // geeksforgeeks.org/simple-tic-tac-toe-game-using-javascript/ makes the most sense but also isn't that DRY
 
@@ -14,8 +14,6 @@ const b6 = document.getElementById("bottom-left").value
 const b7 = document.getElementById("bottom-mid").value
 const b8 = document.getElementById("bottom-right").value
 
-// need to input x's & o's using .addEventListener, onclick & inner.HTML/text.Content
-
 // declaring match 3's as arrays (might need to fix this)
 let topRow = [b0, b1, b2]
 let midRow = [b0, b1, b2]
@@ -25,3 +23,7 @@ let midColumn = [b0, b1, b2]
 let rightColumn = [b0, b1, b2]
 let diagonal1 = [b0, b1, b2]
 let diagonal2 = [b0, b1, b2]
+
+// need to input x's & o's using .addEventListener, onclick & inner.HTML/text.Content
+
+// checking win, loss or draw cases
