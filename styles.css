@@ -1,17 +1,50 @@
-/* used dark grey instead of black cuz uxmovement.com/content/why-you-should-never-use-pure-black-for-text-or-backgrounds/ */
+/* used dark grey instead of black cuz => uxmovement.com/content/why-you-should-never-use-pure-black-for-text-or-backgrounds/ */
 body { 
     background-color: #444444;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    grid-gap: 8px;
 }
 
-/* sourced from w3bits.com/rainbow-text weow*/
-.heading {
-    background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+/* rainbow txt sourced from w3bits.com/rainbow-text weow*/
+.heading, h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-image: linear-gradient(to left, #E920FF, #0023FF, #1BD700, #FFFF00, #FF8600, #FF0D0D);
     -webkit-background-clip: text; 
     color: transparent;
+    text-align: center;
+}
+
+.heading {
+    font-size: 64px;
+    outline: 5px dotted white;
+    grid-column: 4 / 8;
+    grid-row: 2 / 3;
 }
 
 h2 {
-    background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
-    -webkit-background-clip: text; 
-    color: transparent;
+    font-size: 32px;
+    outline: 5px dotted white;
+    grid-column: 4 / 8;
+    grid-row: 3 / 4;
 }
+
+.card1 { 
+    outline: 5px dotted white;
+    grid-column: 2 / 4;
+    grid-row: 4 / 8;
+}
+
+.card2 {
+    outline: 5px dotted white;
+    grid-column: 8 / 10;
+    grid-row: 4 / 8;
+}
+
+.board {
+    outline: 5px dotted white;
+    grid-column: 4 / 8;
+    grid-row: 4 / 8;
+}
+
