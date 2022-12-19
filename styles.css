@@ -1,0 +1,17 @@
+/* used dark grey instead of black cuz uxmovement.com/content/why-you-should-never-use-pure-black-for-text-or-backgrounds/ */
+body { 
+    background-color: #444444;
+}
+
+/* sourced from w3bits.com/rainbow-text weow*/
+.heading {
+    background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+    -webkit-background-clip: text; 
+    color: transparent;
+}
+
+h2 {
+    background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+    -webkit-background-clip: text; 
+    color: transparent;
+}
