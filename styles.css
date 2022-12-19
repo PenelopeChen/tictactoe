@@ -46,10 +46,6 @@ h2 {
 .board {
     grid-column: 4 / 8;
     grid-row: 4 / 8;
-    /* display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(8, 1fr);
-    gap: 8px; */
     background: lightgray;
 }
 
@@ -61,8 +57,9 @@ h2 {
     height: 100%;
 }
 
+/* selecting all child elements of parent element */
 .square > * {
-    outline: 5px dotted cyan;
+    outline: 5px groove cyan;
 }
 
 .top-left {
