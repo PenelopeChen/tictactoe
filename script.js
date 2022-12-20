@@ -26,27 +26,68 @@ let rightColumn = [b0, b1, b2]
 let diagonal1 = [b0, b1, b2]
 let diagonal2 = [b0, b1, b2]
 
-// need to input x's & o's using .addEventListener, onclick & inner.HTML/text.Content
-
-document.getElementById("top-left").onclick = function () {
-    fun()
-}
+// input x's & o's using .addEventListener, onclick & inner.HTML/text.Content
+document.getElementById("top-left").onclick = fun2
 function fun() {
-    document.getElementById("top-left").textContent = "x"
+    e.target.textContent = "x"
 }
+
+document.getElementById("top-mid").onclick = fun2
+function fun() {
+    e.target.textContent = "x"
+}
+
+document.getElementById("top-right").onclick = fun2
+function fun() {
+    e.target.textContent = "x"
+}
+
+document.getElementById("mid-left").onclick = fun2
+function fun() {
+    e.target.textContent = "x"
+}
+
+document.getElementById("mid-mid").onclick = fun2
+function fun() {
+    e.target.textContent = "x"
+}
+
+document.getElementById("mid-right").onclick = fun2
+function fun() {
+    e.target.textContent = "x"
+}
+
+document.getElementById("bottom-left").onclick = fun2
+function fun() {
+    e.target.textContent = "x"
+}
+
+document.getElementById("bottom-mid").onclick = fun2
+function fun() {
+    e.target.textContent = "x"
+}
+
+document.getElementById("bottom-right").onclick = fun2
+function fun() {
+    e.target.textContent = "x"
+}
+// preventing event mishaps & targeting each box
+function fun2(e) {
+    console.log(e.target)
+} 
 
 // checking win, loss or draw cases 
 // checking if Player 1 won or not as well as disabling other boxes
-if ((topRow === xxx) || (midRow === xxx) || (bottomRow === xxx) || (leftColumn === xxx) || (midColumn === xxx) || (rightColumn === xxx) || (diagonal1 === xxx) || (diagonal2 === xxx)) {
-    document.getElementById("h2").textContent = `Player ${1} won!`
-    document.getElementById("square").disabled = true
-// checking if Player 2 won + disabling other boxes
-} else if ((topRow === ooo) || (midRow === ooo) || (bottomRow === ooo) || (leftColumn === ooo) || (midColumn === ooo) || (rightColumn === ooo) || (diagonal1 === ooo) || (diagonal2 === ooo)) { 
-    document.getElementById("h2").textContent = `Player ${2} won!`
-    document.getElementById("square").disabled = true
-} else {
-    document.getElementById("h2").textContent = `It's a draw.`
-    document.getElementById("square").disabled = true
-}
+// if ((topRow === "xxx") || (midRow === "xxx") || (bottomRow === "xxx") || (leftColumn === "xxx") || (midColumn === "xxx") || (rightColumn === "xxx") || (diagonal1 === "xxx") || (diagonal2 === "xxx")) {
+//     document.getElementById("h2").textContent = `Player ${1} won!`
+//     document.getElementById("square").disabled = true
+// // checking if Player 2 won + disabling other boxes
+// } else if ((topRow === "ooo") || (midRow === "ooo") || (bottomRow === "ooo") || (leftColumn === "ooo") || (midColumn === "ooo") || (rightColumn === "ooo") || (diagonal1 === "ooo") || (diagonal2 === "ooo")) { 
+//     document.getElementById("h2").textContent = `Player ${2} won!`
+//     document.getElementById("square").disabled = true
+// } else {
+//     document.getElementById("h2").textContent = `It's a draw.`
+//     document.getElementById("square").disabled = true
+// }
 
 
