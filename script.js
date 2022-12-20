@@ -26,10 +26,6 @@ const rightColumn = [b0, b1, b2]
 const diagonal1 = [b0, b1, b2]
 const diagonal2 = [b0, b1, b2]
 
-// Stringifying the arrays 
-const topRowStringify = JSON.stringify(topRow)
-console.log(topRowStringify)
-
 // Setting the event handler & target whenever click to "x" or "o" event happens. This prevents adding multiple x's or o's to a single box. 
 document.getElementById("top-left").onclick = fun2
 function fun() {
@@ -146,10 +142,29 @@ function fun2(e) {
     }
 } 
 
+// Stringifying the arrays 
+const topRowStringify = JSON.stringify(topRow)
+const midRowStringify = JSON.stringify(midRow)
+const bottomRowStringify = JSON.stringify(bottomRow)
+const leftColumnStringify = JSON.stringify(leftColumn)
+const midColumnStringify = JSON.stringify(midColumn)
+const rightColumnStringify = JSON.stringify(rightColumn)
+const diagonal1Stringify = JSON.stringify(diagonal1)
+const diagonal2Stringify = JSON.stringify(diagonal2)
+
 // checking win, loss or draw cases 
 
-if (topRow === "x", "x", "x") {
-    window.alert("Player 1 won!")
+if ((topRow === "x", "x", "x") || (midRow === "x", "x", "x") || (bottomRow === "x", "x", "x") || (leftColumn === "x", "x", "x") || (midColumn === "x", "x", "x") || (rightColumn === "x", "x","x") || (diagonal1 === "x", "x", "x") || (diagonal2 === "x", "x", "x")) {
+
+    document.querySelector("h2").textContent = "Player 1 won!"
+
+} else if ((topRow === "o", "o", "o") || (midRow === "o", "o", "o") || (bottomRow === "o", "o", "o") || (leftColumn === "o", "o", "o") || (midColumn === "o", "o", "o") || (rightColumn === "o", "o","o") || (diagonal1 === "o", "o", "o") || (diagonal2 === "o", "o", "o")) {
+
+    document.querySelector("h2").textContent = "Player 2 won!"
+
+} else {
+
+    document.querySelector("h2").textContent = "It's a draw."
 }
 
 // if ((topRow === "xxx") || (midRow === "xxx") || (bottomRow === "xxx") || (leftColumn === "xxx") || (midColumn === "xxx") || (rightColumn === "xxx") || (diagonal1 === "xxx") || (diagonal2 === "xxx")) {
