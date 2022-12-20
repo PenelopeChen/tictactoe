@@ -125,29 +125,30 @@ turn = 0
 function fun2(e) {
     console.log(e.target)
     if (e.target.textContent === "") {
+        //nested if block
         if (turn === 0) {
             e.target.textContent = "x"
             turn = 1
+            document.querySelector("h2").textContent = "It's Player 2's turn!"
         } else if (turn === 1) {
             e.target.textContent = "o"
             turn = 0
+            document.querySelector("h2").textContent = "It's Player 1's turn!"
         }
     } else {
-        
+        // apparently, no need to code here for the sake of nesting if blocks
     }
-
 } 
 
 // checking win, loss or draw cases 
-// checking if Player 1 won or not as well as disabling other boxes
 // if ((topRow === "xxx") || (midRow === "xxx") || (bottomRow === "xxx") || (leftColumn === "xxx") || (midColumn === "xxx") || (rightColumn === "xxx") || (diagonal1 === "xxx") || (diagonal2 === "xxx")) {
 //     document.getElementById("h2").textContent = `Player ${1} won!`
-//     document.getElementById("square").disabled = true
+//     // document.getElementById("square").disabled = true
 // // checking if Player 2 won + disabling other boxes
 // } else if ((topRow === "ooo") || (midRow === "ooo") || (bottomRow === "ooo") || (leftColumn === "ooo") || (midColumn === "ooo") || (rightColumn === "ooo") || (diagonal1 === "ooo") || (diagonal2 === "ooo")) { 
 //     document.getElementById("h2").textContent = `Player ${2} won!`
-//     document.getElementById("square").disabled = true
+//     // document.getElementById("square").disabled = true
 // } else {
 //     document.getElementById("h2").textContent = `It's a draw.`
-//     document.getElementById("square").disabled = true
+//     // document.getElementById("square").disabled = true
 // }
