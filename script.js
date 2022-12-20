@@ -1,9 +1,9 @@
 // geeksforgeeks.org/simple-tic-tac-toe-game-using-javascript/ makes the most sense but also isn't that DRY
 
-// check for live game state
+// Check for live game state
 const liveGameState = function () {
 
-// declaring TTT squares as variables & their set DOM
+// Declaring TTT squares as variables & their set DOM
 const b0 = document.getElementById("top-left").textContent
 const b1 = document.getElementById("top-mid").textContent
 const b2 = document.getElementById("top-right").textContent
@@ -14,7 +14,7 @@ const b6 = document.getElementById("bottom-left").textContent
 const b7 = document.getElementById("bottom-mid").textContent
 const b8 = document.getElementById("bottom-right").textContent
 
-// declaring match 3's as arrays 
+// Seclaring match 3's as arrays 
 const topRow = [b0, b1, b2]
 const midRow = [b3, b4, b5]
 const bottomRow = [b6, b7, b8]
@@ -35,21 +35,25 @@ const diagonal1Stringify = JSON.stringify(diagonal1)
 const diagonal2Stringify = JSON.stringify(diagonal2)
 
 // Win or draw cases
+// If Player 1 wins
 if ((topRowStringify === `["x","x","x"]`) || (midRowStringify === `["x","x","x"]`) || (bottomRowStringify === `["x","x","x"]`) || (leftColumnStringify === `["x","x","x"]`) || (midColumnStringify === `["x","x","x"]`) || (rightColumnStringify === `["x","x","x"]`) || (diagonal1Stringify === `["x","x","x"]`) || (diagonal2Stringify === `["x","x","x"]`)) {
     
     document.querySelector("h2").textContent = "Player 1 won!"
-    
+ 
+ // If Player 2 wins   
  } else if ((topRowStringify === `["o","o","o"]`) || (midRowStringify === `["o","o","o"]`) || (bottomRowStringify === `["o","o","o"]`) || (leftColumnStringify === `["o","o","o"]`) || (midColumnStringify === `["o","o","o"]`) || (rightColumnStringify === `["o","o","o"]`) || (diagonal1Stringify === `["o","o","o"]`) || (diagonal2Stringify === `["o","o","o"]`)) {
 
     document.querySelector("h2").textContent = "Player 2 won!"
+ 
+ // If no one wins   
+ } else if ((b0 !== "") && (b1 !== "") && (b2 !== "") && (b3 !== "") && (b4 !== "") && (b5 !== "") && (b6 !== "") && (b7 !== "") && (b8 !== "")) {
     
- } else {
+    document.querySelector("h2").textContent = "It's a draw."
     
-// document.querySelector("h2").textContent = "It's a draw."
-    
- }
+ } 
     
 }
+liveGameState()
 
 
 // Setting the event handler & target whenever click to "x" or "o" event happens. This prevents adding multiple x's or o's to a single box. 
