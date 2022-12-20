@@ -26,7 +26,7 @@ let rightColumn = [b0, b1, b2]
 let diagonal1 = [b0, b1, b2]
 let diagonal2 = [b0, b1, b2]
 
-// input x's & o's using onclick & text.Content
+// Setting the event handler & target whenever click to "x" or "o" event happens. This prevents adding multiple x's or o's to a single box. 
 document.getElementById("top-left").onclick = fun2
 function fun() {
     e.target.textContent = "x"
@@ -129,9 +129,11 @@ function fun2(e) {
         if (turn === 0) {
             e.target.textContent = "x"
             turn = 1
+            // update current game status
             document.querySelector("h2").textContent = "It's Player 2's turn!"
         } else if (turn === 1) {
             e.target.textContent = "o"
+            // switch turn
             turn = 0
             document.querySelector("h2").textContent = "It's Player 1's turn!"
         }
@@ -141,14 +143,16 @@ function fun2(e) {
 } 
 
 // checking win, loss or draw cases 
+
+if (topRow === ["x", "x", "x"]) {
+    window.alert("Player 1 won!")
+}
+
 // if ((topRow === "xxx") || (midRow === "xxx") || (bottomRow === "xxx") || (leftColumn === "xxx") || (midColumn === "xxx") || (rightColumn === "xxx") || (diagonal1 === "xxx") || (diagonal2 === "xxx")) {
 //     document.getElementById("h2").textContent = `Player ${1} won!`
-//     // document.getElementById("square").disabled = true
-// // checking if Player 2 won + disabling other boxes
+// // checking if Player 2 won 
 // } else if ((topRow === "ooo") || (midRow === "ooo") || (bottomRow === "ooo") || (leftColumn === "ooo") || (midColumn === "ooo") || (rightColumn === "ooo") || (diagonal1 === "ooo") || (diagonal2 === "ooo")) { 
 //     document.getElementById("h2").textContent = `Player ${2} won!`
-//     // document.getElementById("square").disabled = true
 // } else {
 //     document.getElementById("h2").textContent = `It's a draw.`
-//     // document.getElementById("square").disabled = true
 // }
