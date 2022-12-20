@@ -18,13 +18,13 @@ const b8 = document.getElementById("bottom-right").value
 
 // declaring match 3's as arrays 
 const topRow = [b0, b1, b2]
-const midRow = [b0, b1, b2]
-const bottomRow = [b0, b1, b2]
-const leftColumn = [b0, b1, b2]
-const midColumn = [b0, b1, b2]
-const rightColumn = [b0, b1, b2]
-const diagonal1 = [b0, b1, b2]
-const diagonal2 = [b0, b1, b2]
+const midRow = [b3, b4, b5]
+const bottomRow = [b6, b7, b8]
+const leftColumn = [b0, b3, b6]
+const midColumn = [b1, b4, b7]
+const rightColumn = [b2, b5, b8]
+const diagonal1 = [b0, b4, b8]
+const diagonal2 = [b2, b4, b6]
 
 // Setting the event handler & target whenever click to "x" or "o" event happens. This prevents adding multiple x's or o's to a single box. 
 document.getElementById("top-left").onclick = fun2
@@ -131,11 +131,13 @@ function fun2(e) {
             turn = 1
             // update current game status
             document.querySelector("h2").textContent = "It's Player 2's turn!"
+            fun3()
         } else if (turn === 1) {
             e.target.textContent = "o"
             // switch turn
             turn = 0
             document.querySelector("h2").textContent = "It's Player 1's turn!"
+            fun3()
         }
     } else {
         // apparently, no need to code here for the sake of nesting if blocks
@@ -154,24 +156,30 @@ const diagonal2Stringify = JSON.stringify(diagonal2)
 
 // checking win, loss or draw cases 
 
-if ((topRow === "x", "x", "x") || (midRow === "x", "x", "x") || (bottomRow === "x", "x", "x") || (leftColumn === "x", "x", "x") || (midColumn === "x", "x", "x") || (rightColumn === "x", "x","x") || (diagonal1 === "x", "x", "x") || (diagonal2 === "x", "x", "x")) {
 
+// try putting this in a function
+const fun3 = function () {
+    if ((topRowStringify === "x", "x", "x") || (midRowStringify === "x", "x", "x") || (bottomRowStringify === "x", "x", "x") || (leftColumnStringify === "x", "x", "x") || (midColumnStringify === "x", "x", "x") || (rightColumnStringify === "x", "x","x") || (diagonal1Stringify === "x", "x", "x") || (diagonal2Stringify === "x", "x", "x")) {
+    console.log(topRowStringify)
+    console.log(midRowStringify)
+    console.log(bottomRowStringify)
+    console.log(leftColumnStringify)
+    console.log(midColumnStringify)
+    console.log(rightColumnStringify)
+    console.log(diagonal1Stringify)
+    console.log(diagonal2Stringify)
     document.querySelector("h2").textContent = "Player 1 won!"
 
-} else if ((topRow === "o", "o", "o") || (midRow === "o", "o", "o") || (bottomRow === "o", "o", "o") || (leftColumn === "o", "o", "o") || (midColumn === "o", "o", "o") || (rightColumn === "o", "o","o") || (diagonal1 === "o", "o", "o") || (diagonal2 === "o", "o", "o")) {
+
+    } else if (!(topRow === "o", "o", "o") || (midRow === "o", "o", "o") || (bottomRow === "o", "o", "o") || (leftColumn === "o", "o", "o") || (midColumn === "o", "o", "o") || (rightColumn === "o", "o","o") || (diagonal1 === "o", "o", "o") || (diagonal2 === "o", "o", "o")) {
 
     document.querySelector("h2").textContent = "Player 2 won!"
 
-} else {
+    } else {
 
     document.querySelector("h2").textContent = "It's a draw."
-}
 
-// if ((topRow === "xxx") || (midRow === "xxx") || (bottomRow === "xxx") || (leftColumn === "xxx") || (midColumn === "xxx") || (rightColumn === "xxx") || (diagonal1 === "xxx") || (diagonal2 === "xxx")) {
-//     document.getElementById("h2").textContent = `Player ${1} won!`
-// // checking if Player 2 won 
-// } else if ((topRow === "ooo") || (midRow === "ooo") || (bottomRow === "ooo") || (leftColumn === "ooo") || (midColumn === "ooo") || (rightColumn === "ooo") || (diagonal1 === "ooo") || (diagonal2 === "ooo")) { 
-//     document.getElementById("h2").textContent = `Player ${2} won!`
-// } else {
-//     document.getElementById("h2").textContent = `It's a draw.`
-// }
+    }
+}
+// Convert strings back to arrays by using split method?
+// 
