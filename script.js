@@ -1,13 +1,10 @@
-// testing if console actually works
-// console.log("yeehaw")
-
 // geeksforgeeks.org/simple-tic-tac-toe-game-using-javascript/ makes the most sense but also isn't that DRY
 
 // check for live game state
- const liveGameState = function () {
-// declare TTT squares as variables & their set DOM
+const liveGameState = function () {
+
+// declaring TTT squares as variables & their set DOM
 const b0 = document.getElementById("top-left").textContent
-// reminding myself .textContent responds to type in html code
 const b1 = document.getElementById("top-mid").textContent
 const b2 = document.getElementById("top-right").textContent
 const b3 = document.getElementById("mid-left").textContent
@@ -37,32 +34,20 @@ const rightColumnStringify = JSON.stringify(rightColumn)
 const diagonal1Stringify = JSON.stringify(diagonal1)
 const diagonal2Stringify = JSON.stringify(diagonal2)
 
-console.log(topRowStringify)
-if (topRowStringify === `["x","x","x"]`) {
+// Win or draw cases
+if ((topRowStringify === `["x","x","x"]`) || (midRowStringify === `["x","x","x"]`) || (bottomRowStringify === `["x","x","x"]`) || (leftColumnStringify === `["x","x","x"]`) || (midColumnStringify === `["x","x","x"]`) || (rightColumnStringify === `["x","x","x"]`) || (diagonal1Stringify === `["x","x","x"]`) || (diagonal2Stringify === `["x","x","x"]`)) {
+    
     document.querySelector("h2").textContent = "Player 1 won!"
-}
+    
+ } else if ((topRowStringify === `["o","o","o"]`) || (midRowStringify === `["o","o","o"]`) || (bottomRowStringify === `["o","o","o"]`) || (leftColumnStringify === `["o","o","o"]`) || (midColumnStringify === `["o","o","o"]`) || (rightColumnStringify === `["o","o","o"]`) || (diagonal1Stringify === `["o","o","o"]`) || (diagonal2Stringify === `["o","o","o"]`)) {
 
-        // if ((topRowStringify === `["x", "x", "x"]`) || (midRowStringify === `["x", "x", "x"]`) || (bottomRowStringify === `["x", "x", "x"]`) || (leftColumnStringify === `["x", "x", "x"]`) || (midColumnStringify === `["x", "x", "x"]`) || (rightColumnStringify === `["x", "x", "x"]`) || (diagonal1Stringify === `["x", "x", "x"]`) || (diagonal2Stringify === `["x", "x", "x"]`)) {
-        // console.log(topRowStringify)
-        // console.log(midRowStringify)
-        // console.log(bottomRowStringify)
-        // console.log(leftColumnStringify)
-        // console.log(midColumnStringify)
-        // console.log(rightColumnStringify)
-        // console.log(diagonal1Stringify)
-        // console.log(diagonal2Stringify)
-        // document.querySelector("h2").textContent = "Player 1 won!"
+    document.querySelector("h2").textContent = "Player 2 won!"
     
+ } else {
     
-        // } else if ((topRowStringify === `["o", "o", "o"]`) || (midRowStringify === `["o", "o", "o"]`) || (bottomRowStringify === `["o", "o", "o"]`) || (leftColumnStringify === `["o", "o", "o"]`) || (midColumnStringify === `["o", "o", "o"]`) || (rightColumnStringify === `["o", "o","o"]`) || (diagonal1Stringify === `["o", "o", "o"]`) || (diagonal2Stringify === `["o", "o", "o"]`)) {
-        //     console.log("click here")
-        // document.querySelector("h2").textContent = "Player 2 won!"
+// document.querySelector("h2").textContent = "It's a draw."
     
-        // } else {
-    
-        // // document.querySelector("h2").textContent = "It's a draw."
-    
-        // }
+ }
     
 }
 
@@ -184,33 +169,3 @@ function fun2(e) {
         // apparently, no need to code here for the sake of nesting if blocks
     }
 } 
-
-// checking win, loss or draw cases 
-
-
-// try putting this in a function
-// const fun3 = function () {
-//     if ((topRowStringify === `["x", "x", "x"]`) || (midRowStringify === `["x", "x", "x"]`) || (bottomRowStringify === `["x", "x", "x"]`) || (leftColumnStringify === `["x", "x", "x"]`) || (midColumnStringify === `["x", "x", "x"]`) || (rightColumnStringify === `["x", "x", "x"]`) || (diagonal1Stringify === `["x", "x", "x"]`) || (diagonal2Stringify === `["x", "x", "x"]`)) {
-//     console.log(topRowStringify)
-//     console.log(midRowStringify)
-//     console.log(bottomRowStringify)
-//     console.log(leftColumnStringify)
-//     console.log(midColumnStringify)
-//     console.log(rightColumnStringify)
-//     console.log(diagonal1Stringify)
-//     console.log(diagonal2Stringify)
-//     document.querySelector("h2").textContent = "Player 1 won!"
-
-
-//     } else if (!(topRow === "o", "o", "o") || (midRow === "o", "o", "o") || (bottomRow === "o", "o", "o") || (leftColumn === "o", "o", "o") || (midColumn === "o", "o", "o") || (rightColumn === "o", "o","o") || (diagonal1 === "o", "o", "o") || (diagonal2 === "o", "o", "o")) {
-
-//     document.querySelector("h2").textContent = "Player 2 won!"
-
-//     } else {
-
-//     document.querySelector("h2").textContent = "It's a draw."
-
-//     }
-// }
-// Convert strings back to arrays by using split method?
-// 
