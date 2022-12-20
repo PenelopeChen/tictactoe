@@ -17,14 +17,18 @@ const b7 = document.getElementById("bottom-mid").value
 const b8 = document.getElementById("bottom-right").value
 
 // declaring match 3's as arrays 
-let topRow = [b0, b1, b2]
-let midRow = [b0, b1, b2]
-let bottomRow = [b0, b1, b2]
-let leftColumn = [b0, b1, b2]
-let midColumn = [b0, b1, b2]
-let rightColumn = [b0, b1, b2]
-let diagonal1 = [b0, b1, b2]
-let diagonal2 = [b0, b1, b2]
+const topRow = [b0, b1, b2]
+const midRow = [b0, b1, b2]
+const bottomRow = [b0, b1, b2]
+const leftColumn = [b0, b1, b2]
+const midColumn = [b0, b1, b2]
+const rightColumn = [b0, b1, b2]
+const diagonal1 = [b0, b1, b2]
+const diagonal2 = [b0, b1, b2]
+
+// Stringifying the arrays 
+const topRowStringify = JSON.stringify(topRow)
+console.log(topRowStringify)
 
 // Setting the event handler & target whenever click to "x" or "o" event happens. This prevents adding multiple x's or o's to a single box. 
 document.getElementById("top-left").onclick = fun2
@@ -144,7 +148,7 @@ function fun2(e) {
 
 // checking win, loss or draw cases 
 
-if (topRow === ["x", "x", "x"]) {
+if (topRow === "x", "x", "x") {
     window.alert("Player 1 won!")
 }
 
