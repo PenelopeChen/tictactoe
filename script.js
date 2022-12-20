@@ -26,11 +26,12 @@ let rightColumn = [b0, b1, b2]
 let diagonal1 = [b0, b1, b2]
 let diagonal2 = [b0, b1, b2]
 
-// input x's & o's using .addEventListener, onclick & inner.HTML/text.Content
+// input x's & o's using onclick & text.Content
 document.getElementById("top-left").onclick = fun2
 function fun() {
     e.target.textContent = "x"
 }
+
 
 document.getElementById("top-mid").onclick = fun2
 function fun() {
@@ -71,9 +72,70 @@ document.getElementById("bottom-right").onclick = fun2
 function fun() {
     e.target.textContent = "x"
 }
+
+document.getElementById("top-left").onclick = fun2
+function fun() {
+    e.target.textContent = "o"
+}
+
+
+document.getElementById("top-mid").onclick = fun2
+function fun() {
+    e.target.textContent = "o"
+}
+
+document.getElementById("top-right").onclick = fun2
+function fun() {
+    e.target.textContent = "o"
+}
+
+document.getElementById("mid-left").onclick = fun2
+function fun() {
+    e.target.textContent = "o"
+}
+
+document.getElementById("mid-mid").onclick = fun2
+function fun() {
+    e.target.textContent = "o"
+}
+
+document.getElementById("mid-right").onclick = fun2
+function fun() {
+    e.target.textContent = "o"
+}
+
+document.getElementById("bottom-left").onclick = fun2
+function fun() {
+    e.target.textContent = "o"
+}
+
+document.getElementById("bottom-mid").onclick = fun2
+function fun() {
+    e.target.textContent = "o"
+}
+
+document.getElementById("bottom-right").onclick = fun2
+function fun() {
+    e.target.textContent = "o"
+}
+
+// declared player turn
+turn = 0
 // preventing event mishaps & targeting each box
 function fun2(e) {
     console.log(e.target)
+    if (e.target.textContent === "") {
+        if (turn === 0) {
+            e.target.textContent = "x"
+            turn = 1
+        } else if (turn === 1) {
+            e.target.textContent = "o"
+            turn = 0
+        }
+    } else {
+        
+    }
+
 } 
 
 // checking win, loss or draw cases 
@@ -89,5 +151,3 @@ function fun2(e) {
 //     document.getElementById("h2").textContent = `It's a draw.`
 //     document.getElementById("square").disabled = true
 // }
-
-
