@@ -44,6 +44,9 @@ h2 {
 }
 
 #btn { 
+    background-color: lightgray;
+    font-size: large;
+    border-radius: 10px;
     grid-column: 5 / 7;
     grid-row: 8 / 9;
 }
