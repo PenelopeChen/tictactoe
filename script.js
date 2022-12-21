@@ -57,103 +57,103 @@ liveGameState()
 
 
 // Setting the event handler & target whenever click to "x" or "o" event happens. This prevents adding multiple x's or o's to a single box. 
-document.getElementById("top-left").onclick = fun2
-function fun() {
+document.getElementById("top-left").onclick = turnBased
+function magicXo() {
     e.target.textContent = "x"
     e.target.style.fontSize = "64px"
 }
 
 
-document.getElementById("top-mid").onclick = fun2
-function fun() {
+document.getElementById("top-mid").onclick = turnBased
+function magicXo() {
     e.target.textContent = "x"
 }
 
-document.getElementById("top-right").onclick = fun2
-function fun() {
+document.getElementById("top-right").onclick = turnBased
+function magicXo() {
     e.target.textContent = "x"
 }
 
-document.getElementById("mid-left").onclick = fun2
-function fun() {
+document.getElementById("mid-left").onclick = turnBased
+function magicXo() {
     e.target.textContent = "x"
 }
 
-document.getElementById("mid-mid").onclick = fun2
-function fun() {
+document.getElementById("mid-mid").onclick = turnBased
+function magicXo() {
     e.target.textContent = "x"
 }
 
-document.getElementById("mid-right").onclick = fun2
-function fun() {
+document.getElementById("mid-right").onclick = turnBased
+function magicXo() {
     e.target.textContent = "x"
 }
 
-document.getElementById("bottom-left").onclick = fun2
-function fun() {
+document.getElementById("bottom-left").onclick = turnBased
+function magicXo() {
     e.target.textContent = "x"
 }
 
-document.getElementById("bottom-mid").onclick = fun2
-function fun() {
+document.getElementById("bottom-mid").onclick = turnBased
+function magicXo() {
     e.target.textContent = "x"
 }
 
-document.getElementById("bottom-right").onclick = fun2
-function fun() {
+document.getElementById("bottom-right").onclick = turnBased
+function magicXo() {
     e.target.textContent = "x"
 }
 
-document.getElementById("top-left").onclick = fun2
-function fun() {
+document.getElementById("top-left").onclick = turnBased
+function magicXo() {
     e.target.textContent = "o"
 }
 
 
-document.getElementById("top-mid").onclick = fun2
-function fun() {
+document.getElementById("top-mid").onclick = turnBased
+function magicXo() {
     e.target.textContent = "o"
 }
 
-document.getElementById("top-right").onclick = fun2
-function fun() {
+document.getElementById("top-right").onclick = turnBased
+function magicXo() {
     e.target.textContent = "o"
 }
 
-document.getElementById("mid-left").onclick = fun2
-function fun() {
+document.getElementById("mid-left").onclick = turnBased
+function magicXo() {
     e.target.textContent = "o"
 }
 
-document.getElementById("mid-mid").onclick = fun2
-function fun() {
+document.getElementById("mid-mid").onclick = turnBased
+function magicXo() {
     e.target.textContent = "o"
 }
 
-document.getElementById("mid-right").onclick = fun2
-function fun() {
+document.getElementById("mid-right").onclick = turnBased
+function magicXo() {
     e.target.textContent = "o"
 }
 
-document.getElementById("bottom-left").onclick = fun2
-function fun() {
+document.getElementById("bottom-left").onclick = turnBased
+function magicXo() {
     e.target.textContent = "o"
 }
 
-document.getElementById("bottom-mid").onclick = fun2
-function fun() {
+document.getElementById("bottom-mid").onclick = turnBased
+function magicXo() {
     e.target.textContent = "o"
 }
 
-document.getElementById("bottom-right").onclick = fun2
-function fun() {
+document.getElementById("bottom-right").onclick = turnBased
+function magicXo() {
     e.target.textContent = "o"
 }
 
 // declared player turn
 turn = 0
 // preventing event mishaps & targeting each box
-function fun2(e) {
+function turnBased(e) {
     console.log(e.target)
     if (e.target.textContent === "") {
         //nested if block
