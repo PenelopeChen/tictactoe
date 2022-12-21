@@ -1,6 +1,6 @@
 # TicTacToe
 
-This is the first front-end project I will create at the General Assembly SEI60 course. TTT (TicTacToe) is a simple game for 2 players. The first player to achieve a row, column or diagonal of 3 symbols on the board wins. TTT will consist of 3 front-end languages: 
+This is the 1st front-end project I created at the General Assembly SEI60 course. TTT (TicTacToe) is a simple, turn-based game for 2 players. The 1st player to achieve a row, column or diagonal of 3 same symbols (x's or o's) on the board wins. TTT consists of 3 front-end languages: 
 - HTML5 
 - CSS3 
 - & vanilla JavaScript. 
@@ -20,10 +20,9 @@ https://www.notion.so/TicTacToe-Pseudocode-3fc81099aa4745618e63ea658a0b3d55
 
 ## Approach 
 
-I am methodical when it comes to doing complex projects with multiple components. Planning a visual layout first is the easiest for me. This allows me to have a visual reference when creating the pseudocodes. If there are any complex systems needed for the game, I will eventually add in a flow diagram.  
+I am methodical when it comes to doing complex projects with multiple components. Planning a visual layout first is the easiest for me. This allows me to have a visual reference when creating the pseudocodes. My intial sketch which got transferred on Figma become my visual reference for creating the pseudocodes. With these components, I was able to efficiently code the HTML & CSS files and focus on the vanilla JavaScript file to make the game functional. 
 
 ---
 
 Copyright Penelope Chen
 
-**yay** - my friend wrote this for the lols
