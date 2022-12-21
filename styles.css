@@ -43,6 +43,11 @@ h2 {
     grid-row: 4 / 8;
 }
 
+#btn { 
+    grid-column: 5 / 7;
+    grid-row: 8 / 9;
+}
+
 .board {
     grid-column: 4 / 8;
     grid-row: 4 / 8;
