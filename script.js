@@ -60,6 +60,7 @@ liveGameState()
 document.getElementById("top-left").onclick = fun2
 function fun() {
     e.target.textContent = "x"
+    e.target.style.fontSize = "64px"
 }
 
 
