@@ -16,7 +16,7 @@ https://www.figma.com/file/O6ELSZSL8IjlM7WHeW2joA/Tic-Tac-Toe-Wireframe?node-id=
 - Pseudocodes (HTML5, CSS3, JS) on Notion
 https://www.notion.so/TicTacToe-Pseudocode-3fc81099aa4745618e63ea658a0b3d55
 
-- The TTT itself
+- The TTT itself on https://github.com/PenelopeChen/tictactoe
 
 ## Approach 
 
