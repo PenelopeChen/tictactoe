@@ -58,6 +58,7 @@ h2 {
     background: lightgray;
 }
 
+/* nested grid */
 .square {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     display: grid;

@@ -14,7 +14,7 @@ const b6 = document.getElementById("bottom-left").textContent
 const b7 = document.getElementById("bottom-mid").textContent
 const b8 = document.getElementById("bottom-right").textContent
 
-// Seclaring match 3's as arrays 
+// Declaring match 3's as arrays 
 const topRow = [b0, b1, b2]
 const midRow = [b3, b4, b5]
 const bottomRow = [b6, b7, b8]
@@ -150,9 +150,9 @@ function magicXo() {
     e.target.textContent = "o"
 }
 
-// declared player turn
+// Declared player turn
 turn = 0
-// preventing event mishaps & targeting each box
+// Preventing event mishaps & targeting each box
 function turnBased(e) {
     console.log(e.target)
     if (e.target.textContent === "") {
@@ -175,7 +175,7 @@ function turnBased(e) {
     }
 } 
 
-// bonus: reset only the square function
+// Bonus: reset only the square function
 let reset = function () {
     document.getElementById("top-left").textContent = ""
     document.getElementById("top-mid").textContent = ""
