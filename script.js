@@ -175,7 +175,7 @@ function turnBased(e) {
     }
 } 
 
-// reset only the square function
+// bonus: reset only the square function
 let reset = function () {
     document.getElementById("top-left").textContent = ""
     document.getElementById("top-mid").textContent = ""

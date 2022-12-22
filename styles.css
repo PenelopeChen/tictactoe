@@ -44,7 +44,7 @@ h2 {
 }
 
 #btn { 
-    cursor: pointer;
+    cursor: pointer; /* bonus feature */
     background-color: lightgray;
     font-size: large;
     border-radius: 5px;
