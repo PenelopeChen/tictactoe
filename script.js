@@ -174,3 +174,23 @@ function turnBased(e) {
         // apparently, no need to code here for the sake of nesting if blocks
     }
 } 
+
+// reset button nested functions
+// let click = function () {
+//     document.getElementById("btn").onclick = reset 
+// }
+// click()
+
+// let reset = function () {
+//     location.reload()
+//     document.getElementById("top-left").textContent = ""
+//     document.getElementById("top-mid").textContent = ""
+//     document.getElementById("top-right").textContent = ""
+//     document.getElementById("mid-left").textContent = ""
+//     document.getElementById("mid-mid").textContent = ""
+//     document.getElementById("mid-right").textContent = ""
+//     document.getElementById("bottom-left").textContent = ""
+//     document.getElementById("bottom-mid").textContent = ""
+//     document.getElementById("bottom-right").textContent = ""
+// }
+// reset()
