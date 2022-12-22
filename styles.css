@@ -43,13 +43,14 @@ h2 {
     grid-row: 4 / 8;
 }
 
-/* #btn { 
+#btn { 
+    cursor: pointer;
     background-color: lightgray;
     font-size: large;
     border-radius: 5px;
     grid-column: 5 / 7;
     grid-row: 8 / 9;
-} */
+}
 
 .board {
     grid-column: 4 / 8;
